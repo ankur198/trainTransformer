@@ -1,0 +1,27 @@
+[
+    {
+        "instruction": "Explain the command `az vm create`.",
+        "input": "",
+        "output": "Create an Azure Virtual Machine."
+    },
+    {
+        "instruction": "List and explain the arguments accepted by the command `az vm create`",
+        "input": "",
+        "output": "The command `az vm create` accepts the following arguments:\n    --name\n    --resource-group\n    [--accelerated-networking {false, true}]\n    [--accept-term]\n    [--admin-password]\n    [--admin-username]\n    [--asgs]\n    [--assign-identity]\n    [--attach-data-disks]\n    [--attach-os-disk]\n    [--authentication-type {all, password, ssh}]\n    [--availability-set]\n    [--boot-diagnostics-storage]\n    [--capacity-reservation-group]\n    [--computer-name]\n    [--count]\n    [--custom-data]\n    [--data-disk-caching]\n    [--data-disk-delete-option]\n    [--data-disk-encryption-sets]\n    [--data-disk-sizes-gb]\n    [--disable-integrity-monitoring-autoupgrade]\n    [--disk-controller-type {NVMe, SCSI}]\n    [--edge-zone]\n    [--enable-agent {false, true}]\n    [--enable-auto-update {false, true}]\n    [--enable-hibernation {false, true}]\n    [--enable-hotpatching {false, true}]\n    [--enable-integrity-monitoring]\n    [--enable-secure-boot {false, true}]\n    [--enable-vtpm {false, true}]\n    [--encryption-at-host {false, true}]\n    [--ephemeral-os-disk {false, true}]\n    [--ephemeral-os-disk-placement {CacheDisk, ResourceDisk}]\n    [--eviction-policy {Deallocate, Delete}]\n    [--generate-ssh-keys]\n    [--host]\n    [--host-group]\n    [--image]\n    [--license-type {None, RHEL_BASE, RHEL_BASESAPAPPS, RHEL_BASESAPHA, RHEL_BYOS, RHEL_ELS_6, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, SLES, SLES_BYOS, SLES_HPC, SLES_SAP, SLES_STANDARD, UBUNTU, UBUNTU_PRO, Windows_Client, Windows_Server}]\n    [--location]\n    [--max-price]\n    [--nic-delete-option]\n    [--nics]\n    [--no-wait]\n    [--nsg]\n    [--nsg-rule {NONE, RDP, SSH}]\n    [--os-disk-caching {None, ReadOnly, ReadWrite}]\n    [--os-disk-delete-option {Delete, Detach}]\n    [--os-disk-encryption-set]\n    [--os-disk-name]\n    [--os-disk-secure-vm-disk-encryption-set]\n    [--os-disk-security-encryption-type {DiskWithVMGuestState, VMGuestStateOnly}]\n    [--os-disk-size-gb]\n    [--os-type {linux, windows}]\n    [--patch-mode {AutomaticByOS, AutomaticByPlatform, ImageDefault, Manual}]\n    [--plan-name]\n    [--plan-product]\n    [--plan-promotion-code]\n    [--plan-publisher]\n    [--platform-fault-domain]\n    [--ppg]\n    [--priority {Low, Regular, Spot}]\n    [--private-ip-address]\n    [--public-ip-address]\n    [--public-ip-address-allocation {dynamic, static}]\n    [--public-ip-address-dns-name]\n    [--public-ip-sku {Basic, Standard}]\n    [--role]\n    [--scope]\n    [--secrets]\n    [--security-type {ConfidentialVM, Standard, TrustedLaunch}]\n    [--size]\n    [--specialized {false, true}]\n    [--ssh-dest-key-path]\n    [--ssh-key-name]\n    [--ssh-key-values]\n    [--storage-account]\n    [--storage-container-name]\n    [--storage-sku]\n    [--subnet]\n    [--subnet-address-prefix]\n    [--tags]\n    [--ultra-ssd-enabled {false, true}]\n    [--use-unmanaged-disk]\n    [--user-data]\n    [--v-cpus-available]\n    [--v-cpus-per-core]\n    [--validate]\n    [--vmss]\n    [--vnet-address-prefix]\n    [--vnet-name]\n    [--workspace]\n    [--zone]\n    \n    Here parameters in square brackets are optional, and parameters in curly braces are mutually exclusive."
+    },
+    {
+        "instruction": "Create a default Ubuntu2204 VM with automatic SSH authentication.",
+        "input": "",
+        "output": "az vm create -n MyVm -g MyResourceGroup --image Ubuntu2204"
+    },
+    {
+        "instruction": "Create a default RedHat VM with automatic SSH authentication using an image URN.",
+        "input": "",
+        "output": "az vm create -n MyVm -g MyResourceGroup --image RedHat:RHEL:7-RAW:7.4.2018010506"
+    },
+    {
+        "instruction": "Create a default Windows Server VM with a private IP address.",
+        "input": "",
+        "output": "az vm create -n MyVm -g MyResourceGroup --public-ip-address \"\" --image Win2012R2Datacenter"
+    }
+]
